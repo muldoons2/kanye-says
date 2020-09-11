@@ -4,7 +4,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-	ye_quote= requests.get("https://api.kanye.rest").json()['quote']
+    ye_quote= requests.get("https://api.kanye.rest").json()['quote']
     return render_template('kanye.html',value=ye_quote)
 
 # @app.route("/kanye")
